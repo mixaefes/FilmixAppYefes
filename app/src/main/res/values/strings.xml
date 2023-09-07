@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FilmixYefes</string>
+    <string name="next_page">Next</string>
+    <string name="filmix">Filmix</string>
+    <string name="prev_page">Prev</string>
+    <string name="favorites">Favorites</string>
+    <string name="there_s_nothing_to_show">There\'s nothing to show</string>
+    <string name="language">Language:</string>
+    <string name="popularity">Popularity:%1$s</string>
+</resources>
