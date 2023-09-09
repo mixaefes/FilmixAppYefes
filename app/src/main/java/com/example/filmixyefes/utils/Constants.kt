@@ -12,15 +12,15 @@ object Constants {
     const val BASE_IMAGE_URI = "https://image.tmdb.org/t/p/w500/"
     val EMPTY_FILM_ITEM = FilmItem(
         adult = false,
-        backdrop_path = "",
+        backdropPath = "",
         id = 0,
-        original_language = "",
+        originalLanguage = "",
         title = "",
         overview = "",
         popularity = 0f,
-        poster_path = "",
+        posterPath = "",
         releaseDate = "",
-        vote_average = 0f
+        voteAverage = 0f
     )
     val EMPTY_FILM_LIST_RESULT =  PopularFilmsList(
         page = 0,

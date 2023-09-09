@@ -22,9 +22,6 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -81,10 +78,10 @@ fun MainScreen(
                 items(items = popularFilmsList.results) { item ->
                     FilmListItem(
                         title = item.title,
-                        language = item.original_language,
-                        posterPath = item.poster_path,
+                        language = item.originalLanguage,
+                        posterPath = item.posterPath,
                         movieId = item.id,
-                        raiting = item.vote_average.toString(),
+                        raiting = item.voteAverage.toString(),
                         onClick = {
                             viewModel.setCurrentFilmId(item.id)
                             navController.navigate(Screens.DetailsScreen.route)

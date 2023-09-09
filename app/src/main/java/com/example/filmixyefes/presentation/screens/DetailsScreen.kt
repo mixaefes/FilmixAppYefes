@@ -15,7 +15,6 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -51,7 +50,7 @@ fun DetailsScreen(viewModel: FilmsViewModel = hiltViewModel(LocalContext.current
         Box(contentAlignment = Alignment.BottomEnd) {
             AsyncImage(
                 contentScale = ContentScale.Fit,
-                model = "${Constants.BASE_IMAGE_URI}${film.backdrop_path}",
+                model = "${Constants.BASE_IMAGE_URI}${film.backdropPath}",
                 contentDescription = null,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -61,14 +60,14 @@ fun DetailsScreen(viewModel: FilmsViewModel = hiltViewModel(LocalContext.current
                     FavoriteFilm(
                         id = film.id,
                         adult = film.adult,
-                        backdropPath = film.backdrop_path,
-                        originalLanguage = film.original_language,
+                        backdropPath = film.backdropPath,
+                        originalLanguage = film.originalLanguage,
                         title = film.title,
                         overview = film.overview,
                         popularity = film.popularity,
-                        posterPath = film.poster_path,
+                        posterPath = film.posterPath,
                         releaseDate = film.releaseDate,
-                        voteAverage = film.vote_average
+                        voteAverage = film.voteAverage
                     )
                 )
             }) {
@@ -107,13 +106,13 @@ fun DetailsScreen(viewModel: FilmsViewModel = hiltViewModel(LocalContext.current
             Row {
                 Icon(Icons.Filled.Face, null, tint = Color.White)
                 Text(
-                    text = "Language:${film.original_language}",
+                    text = "Language:${film.originalLanguage}",
                     color = Color.LightGray
                 )
             }
             Row {
                 Icon(Icons.Filled.Star, null, tint = Color.White)
-                Text(text = "Rating:${film.vote_average}", color = Color.LightGray)
+                Text(text = "Rating:${film.voteAverage}", color = Color.LightGray)
             }
             Row {
                 Icon(Icons.Filled.ThumbUp, null, tint = Color.White)

@@ -13,7 +13,6 @@ import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -30,7 +29,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.filmixyefes.R
-import com.example.filmixyefes.ui.theme.FilmixYefesTheme
 import com.example.filmixyefes.utils.Constants
 
 @Composable
@@ -92,6 +90,13 @@ fun FilmListItem(
 @Composable
 fun FilmListItemPreview() {
     MaterialTheme {
-        // FilmListItem(title = "Terminator", language = "English", posterPath = "", movieId = 1)
+        FilmListItem(
+            title = "Terminator",
+            language = "English",
+            posterPath = "",
+            movieId = 1,
+            onClick = {},
+            raiting = ""
+        )
     }
 }
